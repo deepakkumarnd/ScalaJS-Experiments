@@ -7,7 +7,7 @@ import org.scalajs.dom.{Node, document}
 import org.scalajs.dom.raw.{Element, Event, MouseEvent}
 import scala.concurrent.ExecutionContext.Implicits.global
 
-object Hello {
+object Main {
   def main(args: Array[String]): Unit = {
     // console.log("Hello World")
     println("Hello World")
@@ -21,7 +21,6 @@ object Hello {
     })
 
     // add some style to button
-
     document.body.appendChild(button)
 
     val inputBox: Node = createWrappedInputText(id = "mytext")
@@ -50,7 +49,7 @@ object Hello {
     div
   }
 
-  def createWrappedInputText(id: "mytext"): Node = {
+  def createWrappedInputText(id: String): Node = {
     val input = document.createElement("input").asInstanceOf[dom.html.Input]
     val p = document.createElement("p")
 
